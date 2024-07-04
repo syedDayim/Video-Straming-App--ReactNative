@@ -24,7 +24,7 @@ export default function YTPlayer() {
         videoId={"iee2TATGMyI"}
         onChangeState={onStateChange}
       />
-      <Button title={playing ? "pause" : "play"} onPress={togglePlaying} />
+      {/* <Button title={playing ? "pause" : "play"} onPress={togglePlaying} /> */}
     </View>
   );
 }

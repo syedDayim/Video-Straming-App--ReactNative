@@ -3,10 +3,12 @@ import HomeScreen from "./Screens/HomeScreen";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 import Color from "./Shared/Color"
+import { NavigationContainer } from "@react-navigation/native";
 
 
 export default function Index() {
   return (
+ 
     <ScrollView  style={styles.container}>
       <SafeAreaView>
         <HomeScreen />

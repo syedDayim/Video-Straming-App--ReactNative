@@ -42,10 +42,10 @@ const PlayList = () => {
         showsHorizontalScrollIndicator={false}
         renderItem ={({ item, index }) => {
             return (
-                <TouchableOpacity nPress={() => router.push('PlayVideoScreen')}>
-                    <Image style={styles.sliderImage} source={{uri: item.imageUrl}}/>
-                    <Text style={styles.cardTitle}>{ item.name }</Text>
-                </TouchableOpacity>
+                <TouchableOpacity onPress={() => router.push('/Screens/PlayVideoScreen')}>
+                <Image style={styles.sliderImage} source={{ uri: item.imageUrl }} />
+                <Text style={styles.cardTitle}>{item.name}</Text>
+            </TouchableOpacity>
             )
         }}
       />

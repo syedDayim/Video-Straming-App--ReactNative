@@ -1,11 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native'
 import React from 'react'
+import YTPlayer from "../components/YTPlayer"
+import { Stack } from 'expo-router'
+
 
 const PlayVideoScreen = () => {
   return (
-    <View>
-      <Text>PlayVideoScreen</Text>
-    </View>
+
+
+    <SafeAreaView style={{marginTop: 30}}>
+      <Stack.Screen options={{ headerShown: false }} />
+      <ScrollView>
+        <YTPlayer />
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
