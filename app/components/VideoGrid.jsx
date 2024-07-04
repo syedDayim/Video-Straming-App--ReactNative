@@ -1,8 +1,10 @@
-import { StyleSheet, Text, View, Image, Dimensions, FlatList } from 'react-native'
+import { StyleSheet, Text, View, Image, Dimensions, FlatList, TouchableOpacity } from 'react-native'
 import Color from '../Shared/Color'
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'expo-router';
 
 const PlayList = () => {
+    const router = useRouter();
     const data=[
         {
             id:1,
@@ -40,10 +42,10 @@ const PlayList = () => {
         showsHorizontalScrollIndicator={false}
         renderItem ={({ item, index }) => {
             return (
-                <View>
+                <TouchableOpacity nPress={() => router.push('PlayVideoScreen')}>
                     <Image style={styles.sliderImage} source={{uri: item.imageUrl}}/>
                     <Text style={styles.cardTitle}>{ item.name }</Text>
-                </View>
+                </TouchableOpacity>
             )
         }}
       />

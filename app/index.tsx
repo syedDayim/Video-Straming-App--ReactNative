@@ -1,24 +1,22 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import HomeScreen from "./Screens/HomeScreen";
-import Slider from "./components/Slider";
-import PlayList from "./components/PlayList";
-import VideoGrid from "./components/VideoGrid"
+
 import { SafeAreaView } from "react-native-safe-area-context";
 import Color from "./Shared/Color"
 
+
 export default function Index() {
   return (
-    <SafeAreaView style={styles.container}>
-      <HomeScreen/>
-      <Slider/>
-      <PlayList/>
-      <VideoGrid/>
-    </SafeAreaView>
+    <ScrollView  style={styles.container}>
+      <SafeAreaView>
+        <HomeScreen />
+      </SafeAreaView>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
     padding: 20,
     backgroundColor: Color.black
